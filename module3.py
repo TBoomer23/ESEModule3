@@ -1,16 +1,19 @@
-def brightness(i):
+def brightness(num):
     if values[i] < 256:
         print("Bright")
     elif values[i] < 512:
-            print("Normal")
+        print("Normal")
     elif values[i] < 768:
-            print("Dim")
+        print("Dim")
     elif values[i] < 1024:
-            print("Dark")
-def convert_int2f (input):
-    c = (input*3.3*1000.0/1023 - 500)/10
-    f = 9.0/5.0*c+32
+        print("Dark")
+
+
+def convert_int2f(num):
+    c = (input * 3.3 * 1000.0 / 1023 - 500) / 10
+    f = 9.0 / 5.0 * c + 32
     return f
+
 
 print('Reading MCP3008 values, press Ctrl-C to quit...')
 # Print nice channel column headers.
@@ -28,10 +31,4 @@ while True:
           .format(*values))
     # Pause for half a second.
     time.sleep(0.5)
-
-
-
-
-
-
 
